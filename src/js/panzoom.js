@@ -33,7 +33,7 @@ pinchZoom.addEventListener('pointerup', () => {
 });
 
 const resetPanAndZoom = () => {
-  svgOutput.setAttribute('transform', '');
+  svgOutput.setAttribute('transform', 'scale(2)');
 };
 
 export { resetPanAndZoom };
