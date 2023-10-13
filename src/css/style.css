@@ -476,6 +476,8 @@ button:hover {
   gap: var(--space);
   overflow: auto hidden;
   scrollbar-width: none;
+  margin-left: 10px;
+  margin-top: 3px;
 }
 
 .menu.window-controls-overlay {
@@ -545,4 +547,8 @@ dark-mode-toggle {
   border-radius: var(--space);
   max-width: fit-content;
   margin-block: calc(2 * var(--space));
+}
+
+.hide {
+  display: none;
 }

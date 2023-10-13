@@ -104,7 +104,7 @@
   </head>
   <body>
     <main>
-      <details class="main">
+      <details class="main hide">
         <summary></summary>
         <button type="button" class="with-bg close-options-button">
           <span aria-hidden="true">&#10005;</span>
@@ -118,7 +118,6 @@
                   type="radio"
                   class="color"
                   name="output-option"
-                  checked
                 />
                 <label for="color"></label>
               </div>
@@ -128,6 +127,7 @@
                   type="radio"
                   class="monochrome"
                   name="output-option"
+                  checked
                 />
                 <label for="monochrome"></label>
               </div>
@@ -194,22 +194,18 @@
       </details>
       <div class="main-area">
         <div class="menu">
-          <button class="open menu" type="button"></button>
+          <button class="open menu hide" type="button"></button>
           <button class="save menu" type="button"></button>
           <button class="copy menu" type="button"></button>
-          <button class="paste menu" type="button"></button>
+          <button class="paste menu hide" type="button"></button>
           <button class="share menu" type="button"></button>
           <button class="install menu" type="button"></button>
-          <progress hidden value="0" max="100"></progress>
-          <label hidden><input class="debug" type="checkbox" /> Debug</label>
+          <progress hidden value="0" max="100" class="hide"></progress>
+          <label hidden class="hide"
+            ><input class="debug" type="checkbox" /> Debug</label
+          >
         </div>
-        <img
-          class="input-image"
-          crossorigin="anonymous"
-          src="/favicon.png"
-          alt=""
-          draggable="false"
-        />
+        <img class="input-image" src="" alt="" draggable="false" />
         <canvas></canvas>
         <div dir="ltr" class="pinch-zoom-wrapper">
           <pinch-zoom class="checkerboard">

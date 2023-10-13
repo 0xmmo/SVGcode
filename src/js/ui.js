@@ -452,21 +452,12 @@ const initUI = async () => {
   inputImage.addEventListener('load', async () => {
     inputImage.width = inputImage.naturalWidth;
     inputImage.height = inputImage.naturalHeight;
-    const settings = await getSettings();
-    if (
-      inputImage.src !== new URL('/favicon.png', location.href).toString() ||
-      Object.keys(settings).length > 1
-    ) {
-      setTimeout(async () => {
-        resetPanAndZoom();
+    setTimeout(async () => {
+      resetPanAndZoom();
+      if (inputImage.src) {
         await startProcessing();
-      }, 100);
-    } else {
-      const svg = await fetch(
-        `/potraced-${colorRadio.checked ? 'color' : 'monochrome'}.svg`,
-      ).then((response) => response.text());
-      svgOutput.innerHTML = svg;
-    }
+      }
+    }, 100);
   });
 
   if (inputImage.complete) {
@@ -481,6 +472,12 @@ const initUI = async () => {
     debugCheckbox.checked = true;
     debugCheckbox.labels[0].hidden = false;
     debugCheckbox.dispatchEvent(new Event('input'));
+  }
+
+  if (searchParams.has('src')) {
+    const src = searchParams.get('src');
+    const srcUrl = `https://legacy-generations.unstock.ai/${src}.png`;
+    inputImage.setAttribute('src', srcUrl);
   }
 
   try {

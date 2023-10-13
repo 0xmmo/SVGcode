@@ -101,7 +101,7 @@ const supportsWorkerType = () => {
 
 const onColorSchemeChange = () => {
   const mode = darkModeToggle.mode;
-  documentElement.style.setProperty('--color-scheme', mode);
+  documentElement.style.setProperty('--color-scheme', 'dark');
   metaThemeColor.content = mode === 'dark' ? '#131313' : '#fff';
 };
 darkModeToggle.addEventListener('colorschemechange', onColorSchemeChange);
