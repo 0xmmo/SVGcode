@@ -35,7 +35,7 @@ const showAdvancedControlsCheckbox = document.querySelector('.show-advanced');
 const showAdvancedControlsLabel = document.querySelector(
   '[for="show-advanced"]',
 );
-const inputImage = document.querySelector('img');
+const inputImage = document.querySelector('.input-image');
 const resetAllButton = document.querySelector('.reset-all');
 const fileOpenButton = document.querySelector('.open');
 const saveSVGButton = document.querySelector('.save');

@@ -368,11 +368,24 @@ select {
   flex-shrink: 0;
 }
 
+.logo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: black;
+  z-index: 2000;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+}
+
 button.menu {
   border: none;
   width: max-content;
   flex-shrink: 0;
   margin-inline-end: calc(4 * var(--space));
+  padding-left: 0;
+  margin: 3px;
 }
 
 button.menu > span:last-of-type {
@@ -476,7 +489,7 @@ button:hover {
   gap: var(--space);
   overflow: auto hidden;
   scrollbar-width: none;
-  margin-left: 10px;
+  padding-left: 20px;
   margin-top: 3px;
 }
 
