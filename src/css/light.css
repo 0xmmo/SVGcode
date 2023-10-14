@@ -18,10 +18,10 @@
  */
 
 :root {
-  --main-accent-color: #e60073;
-  --alternative-accent-color: #337eff;
-  --canvas-text: #000;
-  --canvas: #fff;
+  --main-accent-color: #567;
+  --alternative-accent-color: #567;
+  --canvas-text: #cde;
+  --canvas: #cde;
 }
 
 .dropenter::before {
