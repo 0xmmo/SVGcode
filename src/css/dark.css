@@ -18,10 +18,10 @@
  */
 
 :root {
-  --main-accent-color: hotpink;
-  --alternative-accent-color: #337eff;
-  --canvas-text: #fff;
-  --canvas: #131313;
+  --main-accent-color: #567;
+  --alternative-accent-color: #567;
+  --canvas-text: #cde;
+  --canvas: #cde;
 
   background-color: var(--canvas);
   color: var(--canvas-text);
