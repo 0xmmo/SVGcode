@@ -21,7 +21,7 @@
   --main-accent-color: #567;
   --alternative-accent-color: #567;
   --canvas-text: #cde;
-  --canvas: #cde;
+  --canvas: #131313;
 
   background-color: var(--canvas);
   color: var(--canvas-text);
